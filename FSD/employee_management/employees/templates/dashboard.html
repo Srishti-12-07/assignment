@@ -1,0 +1,7 @@
+<h2>Dashboard</h2>
+<ul>
+    {% for employee in employees %}
+    <li>{{ employee.first_name }} {{ employee.last_name }} - <a href="{% url 'edit_employee' employee.id %}">Edit</a></li>
+    {% endfor %}
+</ul>
+<a href="{% url 'add_employee' %}">Add Employee</a>
